@@ -1,0 +1,18 @@
+.match {
+  color: red;
+}
+.normal {
+  color: blue;
+}
+.main {
+  display: block;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.input-style {
+  margin: 6px;
+  font-size: 20px;
+}
+body {
+  background-color: aqua;
+}

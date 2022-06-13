@@ -1,9 +1,6 @@
 .match {
   color: red;
 }
-.normal {
-  color: blue;
-}
 .main {
   display: block;
   font-size: 20px;

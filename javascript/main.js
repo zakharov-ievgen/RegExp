@@ -3,7 +3,7 @@ const sp2 = document.querySelector(`.span2`);
 const sp3 = document.querySelector(`.span3`);
 const sp4 = document.querySelector(`.span4`);
 let input = document.querySelector(`.data`);
-input.oninput = function CheckValue() {
+function CheckValue() {
     let str = input.value;
     if (/[А-ЯЁA-Z]/.test(str)) {
         sp1.classList.add(`match`);
@@ -15,14 +15,15 @@ input.oninput = function CheckValue() {
     } else {
         sp2.classList.remove(`match`);
     }
-    if (/[^\d\sA-Z]/gi.test(str)) {
+    if (/[^\d\sA-ZА-ЯЁ]/gi.test(str)) {
         sp3.classList.add(`match`);
     } else {
         sp3.classList.remove(`match`);
     }
-    if (str.length > 8) {
+    if (str.length >= 8) {
         sp4.classList.add(`match`);
     } else {
         sp4.classList.remove(`match`);
     }
-};
+}
+input.addEventListener(`input`, CheckValue);
